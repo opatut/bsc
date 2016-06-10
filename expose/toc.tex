@@ -1,37 +1,44 @@
-\section{Preliminary Table of contents}
+% \section{Preliminary Table of contents}
 
-{
+\begin{table}[htb]
     \renewcommand{\labelenumii}{\theenumii}
     \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 
-    \begin{enumerate}[noitemsep]
-        \item Introduction
-            \begin{enumerate}[noitemsep]
-                \item Motivation
-                \item Goals
-                \item Existing works
-            \end{enumerate}
+    \centering
+    \fbox{\parbox{0.8\textwidth}{
+        \begin{enumerate}[noitemsep]
+            \item Introduction
+                \begin{enumerate}[noitemsep]
+                    \item Motivation
+                    \item Goals
+                \end{enumerate}
 
-        \item Specification
-            \begin{enumerate}[noitemsep]
-                \item Requirements
-                \item Implementations
-            \end{enumerate}
+            \item State of the Art
+                \begin{enumerate}[noitemsep]
+                    \item Specification formats
+                    \item Password managers
+                    \item Encryption tools
+                    \item Distributed data storage and synchronization
+                    \item Conflict resolution
+                \end{enumerate}
 
-        \item Implementation
-            \begin{enumerate}[noitemsep]
-                \item Backend
-                \item UI
-                \item Browser integration
-            \end{enumerate}
+            \item Derivation of the Specification
+                \begin{enumerate}[noitemsep]
+                    \item Backend
+                    \item UI
+                    \item Browser integration
+                \end{enumerate}
 
-        \item Evaluation
-            \begin{enumerate}[noitemsep]
-                \item Backend capabilities
-                \item User studies
-            \end{enumerate}
+            \item Discussion / Evaluation
+                \begin{enumerate}[noitemsep]
+                    \item Strengths
+                    \item Problems
+                    \item Adjustments
+                \end{enumerate}
 
-        \item Conclusion
-        \item References
-    \end{enumerate}
-}
+            \item Conclusion
+            \item References
+        \end{enumerate}
+    }}
+    \caption{Preliminary Table of Contents}\label{tab:toc}
+\end{table}
