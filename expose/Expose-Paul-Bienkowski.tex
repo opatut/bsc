@@ -1,0 +1,79 @@
+\documentclass[a4paper,12pt,fleqn,oneside]{scrartcl}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[toc,page]{appendix}
+\usepackage{floatflt}
+\usepackage{lmodern}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{pgfplots}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{mdframed}
+\usepackage{tabularx}
+\usepackage{tabu}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{blindtext}
+\usepackage{etoolbox}
+\usepackage{lastpage}
+\usepackage{tocloft}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[asymmetric,top=1.5in,bottom=1.5in,left=1.2in,right=1.2in]{geometry}
+\usepackage[sectionbib]{natbib}
+
+\usepackage{tgpagella}
+% \usepackage{quattrocento}
+
+\usetikzlibrary{shapes,arrows,calc,patterns,decorations.markings,shadows.blur}
+
+\title{Exposé - Specification for a distributed secret management system with sharing capabilities}
+\author{Paul Bienkowski \\[0.2em] \scriptsize 2bienkow@informatik.uni-hamburg.de}
+\date{\today}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Exposé - Distributed secret management}
+% \fancyhead[R]{}
+%\setlength{\footskip}{2em}
+%\setlength{\footrulewidth}{0.4pt}
+\fancyfoot[L]{\small{}Paul Bienkowski}
+\fancyfoot[R]{\small{}Page \thepage \:of \pageref{LastPage}}
+
+\newif\iffinal
+\finaltrue
+
+% \renewcommand{\arraystretch}{1.2}
+% \renewcommand{\arraystretch}{1.5}
+% \renewcommand{\familydefault}{\sfdefault}
+\linespread{1.1}
+
+\let\stdsection\section
+% \renewcommand\section{\newpage\stdsection}
+\setlength{\parindent}{0pt}
+% \setlength{\parskip}{1.8ex}
+\setlength{\parskip}{1.0ex}
+
+\begin{document}
+
+\maketitle
+\input{motivation.tex}
+\input{goal.tex}
+\input{toc.tex}
+\input{related-works.tex}
+\input{timetable.tex}
+\input{bib.tex}
+
+\end{document}

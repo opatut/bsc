@@ -1,0 +1,28 @@
+\section{Goal}
+
+The goal of this work is to specify a protocol for a distributed system that
+resolves the introduced problems. A system following that protocol shall be
+able to synchronize secrets in a secure manner, such that multiple people can
+concurrently access and modify those secrets.
+
+This system shall exhibit these main features:
+
+\begin{itemize}
+    \item \textbf{Security}: Since the system is handling secrets, the solution
+        must provide secure storage and transmission. This is the core priority
+        of the protocol.
+
+    \item \textbf{Distributed storage}: The storage shall be distributed, i.e.\ 
+        accessible from different devices, and synchronizable across those
+        devices. 
+
+    \item \textbf{Sharing}: It must be possible to share secrets with other
+        people, in a manner that ensures those people can access the secret.
+        
+    \item \textbf{Conflict resolution}: The system must provide conflict
+        resolution routines, that is, specify how to handle the event of
+        different changes to the same secret to reach a consistent state.
+
+\end{itemize}
+
+I will also provide an example implementation of this specification.
