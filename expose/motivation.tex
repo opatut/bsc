@@ -1,30 +1,69 @@
 \section{Motivation}
 
-% - passwords are really importeant
+% - passwords are really important
 % - everyone uses them
 % - obvious upside: sharing
 
-The most common way for humans to authenticate against digital systems nowadays is the use of passwords, the core reason for which is its obvious simplicity. Compared to other methods such as cryptographic keys, devices, or biometric feature detection, it is very simple to create, use and verify passwords, both for the system as the user.
+The most common way for humans to authenticate to digital systems nowadays is
+the use of passwords, the core reason for which is its obvious simplicity.
+Compared to other methods such as cryptographic keys, devices, or biometric
+feature detection, it is very \emph{simple to understand} how passwords work
+and how to use them, at least on a basic, rather insecure level.
 
-Furthermore, passwords can simply be shared among people. While this practice is generally discouraged due to its security implications, it still finds widespread use within teams. Instead of creating separate accounts for each team member, and updating them whenever someone joins or leaves the team, a group password is generated and everyone in the team is given access via this password. This reduces the management overhead for the team leaders, and it becomes very important when different organizations work together using resources made available through one of the organization's digital services.
+Furthermore, passwords can be shared with other people. While this practice is
+generally discouraged for security reasons, it still finds widespread use
+within teams. Instead of creating separate accounts for each team member, and
+updating them whenever someone joins or leaves the team, a group password is
+generated and everyone in the team is given access via this password. This
+reduces the management overhead for the team leaders, and it becomes very
+important when different organizations work together using resources made
+available through one of the organization's digital services.
 
 % - done everywhere (team wide passwords)
 % - obvious downside: security
 % - solution: complicated + password manager
 
+A problem arises when one aims at using passwords in a secure manner.  Given
+the ever-increasing computational capacity of computers, one should not utilize
+simple passwords that are easy to remember for authentication. Instead, it is
+considered best practice to generate long random passwords from a large
+character set, and not passwords them for different systems. This ensures that
+the password can neither be guessed nor brute-forced in reasonable amounts of
+time. To achieve this, many companies enforce a strict password guideline among
+their employees. Because it is near impossible to remember a large number of
+those high-quality passwords, password managers have come into existence, which
+store all of a user's passwords using encryption technologies. Then, only a
+single \emph{master password} is required to unlock all personal passwords
+stored inside, which the user must remember (and keep safe).
 
-Given the ever-increasing computational capacity of computers, one should not utilize simple passwords that are easy to remember for authentication. Instead, it is considered best practice to generate long random passwords from a large character set, and not reuse them for different systems. This ensures that the password can neither be guessed nor brute-forced in reasonable amounts of time. In this manner, many companies enforce a strict password guideline among their employees. Because it is near impossible to remember many of those passwords, password managers have come into existence, to store all of a user's passwords using encryption technologies to keep them safe. Then, only a single \emph{master password} is required to unlock all personal passwords stored inside.
-
-% - problem arises: sharing capability required
-We consider a team of employees, each utilizing a password manager (as enforced by company policy) to manage their personal passwords. Sharing team-wide passwords via (possibly unencrypted) email or other text-based media is always a security risk, and sharing them orally (via phone or in person) is tedious and may result in errorneous transmission. Instead, the company seeks to use a common password manager that is capable of sharing passwords with other people.
+% - sharing capability required
+We consider a team of employees, each utilizing a password manager (as enforced
+by company policy) to manage their personal passwords. Sharing team-wide
+passwords via (possibly unencrypted) email or other text-based media is always
+a security risk, and sharing them via phone or in person is tedious and may
+result in errorneous transmission. Instead, the company seeks to use a common
+password manager that is capable of sharing passwords with other people.
 
 % - existing solutions: proprietary, cloud based
-There are plentiful solutions for this, where one can transmit a password secretly to a single contact, or group of contacts. However, these existing solutions have one problem in common: they all are proprietary (often paid) solutions, hosted by their creators \emph{,,in the cloud''}, that is, on a publicly accessibly system. While this makes it very simple to set up a team to use these solutions, and generally works pretty well for everyone, it also involves a security risk: highly confidential data (secrets used for authentication) are stored on foreign servers, made accessible via the internet, outside the control of the data owners.
+There are numerous solutions for this, which allow transmission of a password
+secretly to a single contact, or group of contacts. However, these existing
+solutions have one problem in common: they are all proprietary and often paid
+solutions, hosted by their creators \emph{,,in the cloud''}, that is, on a
+publicly accessibly system. While this makes it very simple to set up a team to
+use these solutions, and generally works pretty well for everyone, it also
+involves a security risk: highly confidential data, the secrets used for
+authentication, are stored on foreign servers, made accessible via the
+internet, outside the control of the data owners.
 
 % - problem with those: highly confidential data not under company control
-Furthermore, these servers are a high profile target for attackers, since they store secrets for many of their clients.
-The popular password management site LastPass has just recently (2015) been target of an attack, where login hashes have been exposed \cite{lastpass-security-notice}.
-Like that, a single successful attack might allow access to many more protected resources -- in above notice LastPass claims to serve ,,millions of users''.
+Furthermore, these servers are an interesting target for attackers, since they
+store many secrets for large companies. The popular password management site
+LastPass has just recently (in 2015) been target of an attack, where login
+hashes have been exposed\cite{lastpass-security-notice}. Like that, a single
+successful attack might allow access to many more protected resources --
+LastPass claims to serve ,,millions of users''.
 
 % - solution: distributed system
-In my thesis, I plan to design a system that does not involve this security risk: a distributed secret management system with sharing capabilities.
+In my thesis, I plan to design a system that does not involve this security
+risk: a distributed secret management system with sharing capabilities.
+
